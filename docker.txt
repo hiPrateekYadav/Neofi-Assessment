@@ -1,0 +1,12 @@
+============================= How to start ==========================
+* Open terminal where the code with dockerfile is present
+> docker build -t noteapp .
+> docker run -p 8000:8000 -v $(pwd):/code noteapp
+* And the server run for development on your pc :- http://localhost:8000/
+
+
+============================= How to clean docker ========================
+> docker stop $(docker ps -q)
+> docker rm -f $(docker ps -aq)
+> docker rmi -f $(docker images -q)
+> docker volume rm -f $(docker volume ls -q)
